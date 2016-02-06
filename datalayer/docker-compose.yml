@@ -1,14 +1,14 @@
 db:
-    image: ./docker-database-config
+    build: ./docker-database-config/
     ports:
         - "5432:5432"
 web:
     build: .
-    # command: python server.py
+    command: python datalayer/manage.py runserver 0.0.0.0:8000
     ports:
-        - "5000:5000"
+        - "8000:8000"
     volumes:
-        - .:/code
+        - .:/datalayer
     links:
         - db
 # mongo:

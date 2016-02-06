@@ -1,1 +1,4 @@
-flask
+django==1.9.2
+djangorestframework
+django-debug-toolbar
+psycopg2
