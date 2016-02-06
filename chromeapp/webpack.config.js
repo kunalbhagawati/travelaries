@@ -1,4 +1,5 @@
 path = require('path');
+CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
@@ -11,17 +12,18 @@ module.exports = {
 
     output: {
         path: path.join(__dirname, 'build/js'),
-        filename: '[name]-bundle.js'
+        filename: '[name].js'
     },
 
     devtool: 'sourcemaps',
 
     module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            loader: 'babel',
-            exclude: /node_modules/
-        },
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                loader: 'babel',
+                exclude: /node_modules/
+            },
             {
                 test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$/,
                 loader: 'file'
@@ -33,6 +35,13 @@ module.exports = {
             {
                 test: /\.less$/,
                 loader: "style!css!less"
-            }]
-    }
+            }
+        ]
+    },
+
+    plugins: [
+        new CopyWebpackPlugin([
+            {from: './manifest.json', to: 'build/'}
+        ])
+    ]
 };

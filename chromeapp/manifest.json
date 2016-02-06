@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "Travelairies",
-  "description": "This extension shows the description of an image and add it to digital personal travel dairy named traveliers",
-  "version": "1.0",
+  "description": "This extension shows the description of an image and adds it to digital personal travel diary named Travelairies",
+  "version": "0.0.1",
 
   "browser_action": {
     "default_icon": "icon.png",
