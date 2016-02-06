@@ -41,7 +41,7 @@ module.exports = {
 
     plugins: [
         new CopyWebpackPlugin([
-            {from: './manifest.json', to: 'build/'}
+            {from: '../manifest.json', to: '../manifest.json'}
         ])
     ]
 };
