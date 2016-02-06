@@ -14,6 +14,8 @@ module.exports = {
         filename: '[name]-bundle.js'
     },
 
+    devtool: 'sourcemaps',
+
     module: {
         loaders: [{
             test: /\.jsx?$/,
