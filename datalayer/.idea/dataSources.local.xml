@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - travelaries@docker" uuid="29c7c054-61d6-42f2-bd92-24ff0cc09adf">
+      <secret-storage>memory</secret-storage>
+      <user-name>travelaries</user-name>
+      <schema-pattern>travelaries.*</schema-pattern>
+      <default-schemas>travelaries.public</default-schemas>
+    </data-source>
+  </component>
+</project>
